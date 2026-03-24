@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://x2ql3wby2daw"]
+
+[ext_resource type="Texture2D" uid="uid://qoqrm6q3xggd" path="res://Assets/Sprites/Toppings/Boba.png" id="1_u5pay"]
+
+[node name="Boba" type="Node2D" unique_id=1816165864]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=732682920]
+
+[node name="Boba" type="Sprite2D" parent="." unique_id=820802193]
+texture = ExtResource("1_u5pay")

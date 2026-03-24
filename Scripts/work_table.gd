@@ -1,0 +1,18 @@
+extends Node2D
+
+@onready var inverntory_slots: CanvasLayer = $InverntorySlots
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	inverntory_slots.toggle_inventory(false)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_toppings_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed:
+		inverntory_slots.toggle_inventory(true)
