@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://booqteknk6pgn"]
+
+[ext_resource type="Script" uid="uid://dsslf4y6lw8ns" path="res://Scripts/GameItems/jar_empty.gd" id="1_8tffw"]
+[ext_resource type="Texture2D" uid="uid://crood6xhh1h1" path="res://Assets/Sprites/Drink_Jar_Base.png" id="1_xivji"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tffw"]
+size = Vector2(26, 42.6875)
+
+[node name="JarEmpty" type="RigidBody2D" unique_id=5045356 groups=["trashable"]]
+collision_layer = 2
+collision_mask = 2
+input_pickable = true
+script = ExtResource("1_8tffw")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1089745378]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2131073096]
+position = Vector2(0, 0.65625)
+shape = SubResource("RectangleShape2D_8tffw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1210744492]
+position = Vector2(0, 0.6875)
+shape = SubResource("RectangleShape2D_8tffw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=440530062]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_xivji")
+
+[connection signal="input_event" from="." to="." method="_on_area_2d_input_event"]

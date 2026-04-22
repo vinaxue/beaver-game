@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cso37yikfkgol"
-path="res://.godot/imported/With_Straw.png-9b0a4edd699871d3a2727c2a34cba2a2.ctex"
+uid="uid://csog61tm1506y"
+path="res://.godot/imported/Tea.png-6c82e593bcc0cbd5eb5885a97a2ac5dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/With_Straw.png"
-dest_files=["res://.godot/imported/With_Straw.png-9b0a4edd699871d3a2727c2a34cba2a2.ctex"]
+source_file="res://Assets/Textures/Tea.png"
+dest_files=["res://.godot/imported/Tea.png-6c82e593bcc0cbd5eb5885a97a2ac5dc.ctex"]
 
 [params]
 

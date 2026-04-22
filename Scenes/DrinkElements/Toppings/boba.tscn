@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://x2ql3wby2daw"]
+
+[ext_resource type="PackedScene" uid="uid://da2i2kff1gvf6" path="res://Scenes/Interfaces/base_topping.tscn" id="1_5io45"]
+[ext_resource type="Texture2D" uid="uid://qoqrm6q3xggd" path="res://Assets/Sprites/Toppings/Boba.png" id="2_2tupr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qe7im"]
+radius = 3.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2ugc"]
+atlas = ExtResource("2_2tupr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15cbu"]
+atlas = ExtResource("2_2tupr")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vx1v2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2ugc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15cbu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2tupr"]
+radius = 3.0
+
+[node name="Boba" unique_id=673148770 instance=ExtResource("1_5io45")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=1332543583]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_qe7im")
+
+[node name="AnimatedSprite2D" parent="Area2D" parent_id_path=PackedInt32Array(1852275141) index="0" unique_id=284717404]
+sprite_frames = SubResource("SpriteFrames_vx1v2")
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(1852275141) index="1" unique_id=263923442]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_2tupr")

@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://bas3tdyr5nx82"]
+
+[ext_resource type="Texture2D" uid="uid://bwprev2bnlhxx" path="res://Assets/UI/Inventory.png" id="1_0e5tt"]
+[ext_resource type="Script" uid="uid://b8iskxw25nxnc" path="res://Scripts/Interfaces/base_inventory.gd" id="2_m8rjd"]
+[ext_resource type="PackedScene" uid="uid://cqbswe6elskyw" path="res://Scenes/UI/individual_slot.tscn" id="3_najqk"]
+
+[node name="InventorySlots" type="CanvasLayer" unique_id=914429271]
+script = ExtResource("2_m8rjd")
+
+[node name="Control" type="Control" parent="." unique_id=1709777478]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BackgroundShield" type="ColorRect" parent="Control" unique_id=1991189265]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -351.0
+offset_top = -194.0
+offset_right = 300.0
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1267701662]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("1_0e5tt")
+metadata/_edit_use_anchors_ = true
+
+[node name="GridContainer" type="GridContainer" parent="Control/TextureRect" unique_id=1855613467]
+layout_mode = 0
+offset_right = 0.43199253
+columns = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Slots" type="Node" parent="Control/TextureRect" unique_id=2065282960]
+
+[node name="Slot1" parent="Control/TextureRect/Slots" unique_id=608675343 instance=ExtResource("3_najqk")]
+offset_left = -52.0
+offset_top = -52.0
+offset_right = -20.0
+offset_bottom = -20.0
+
+[node name="Slot2" parent="Control/TextureRect/Slots" unique_id=2121407717 instance=ExtResource("3_najqk")]
+offset_left = -16.0
+offset_top = -52.0
+offset_right = 16.0
+offset_bottom = -20.0
+
+[node name="Slot3" parent="Control/TextureRect/Slots" unique_id=545599671 instance=ExtResource("3_najqk")]
+offset_left = 20.0
+offset_top = -52.0
+offset_right = 52.0
+offset_bottom = -20.0
+
+[node name="Slot4" parent="Control/TextureRect/Slots" unique_id=698956751 instance=ExtResource("3_najqk")]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+
+[node name="Slot5" parent="Control/TextureRect/Slots" unique_id=1499799162 instance=ExtResource("3_najqk")]
+offset_left = -52.0
+offset_top = -16.0
+offset_right = -20.0
+offset_bottom = 16.0
+
+[node name="Slot6" parent="Control/TextureRect/Slots" unique_id=1202729244 instance=ExtResource("3_najqk")]
+offset_left = 20.0
+offset_top = -16.0
+offset_right = 52.0
+offset_bottom = 16.0
+
+[node name="Slot7" parent="Control/TextureRect/Slots" unique_id=227328235 instance=ExtResource("3_najqk")]
+offset_left = -52.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 52.0
+
+[node name="Slot8" parent="Control/TextureRect/Slots" unique_id=352868653 instance=ExtResource("3_najqk")]
+offset_left = -16.0
+offset_top = 20.0
+offset_right = 16.0
+offset_bottom = 52.0
+
+[node name="Slot9" parent="Control/TextureRect/Slots" unique_id=1188106921 instance=ExtResource("3_najqk")]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 52.0
+offset_bottom = 52.0
+
+[connection signal="focus_exited" from="Control" to="." method="_on_control_focus_exited"]
+[connection signal="gui_input" from="Control/BackgroundShield" to="." method="_on_background_shield_gui_input"]

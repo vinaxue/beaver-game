@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://byp8g8ciwjbc6"]
+
+[ext_resource type="PackedScene" uid="uid://da2i2kff1gvf6" path="res://Scenes/Interfaces/base_topping.tscn" id="1_s2gna"]
+[ext_resource type="Texture2D" uid="uid://cuu8tsy4v3g78" path="res://Assets/Sprites/Toppings/Coconut_Jelly.png" id="2_r0a7v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m7uri"]
+size = Vector2(6, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7p0ch"]
+atlas = ExtResource("2_r0a7v")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytwj6"]
+atlas = ExtResource("2_r0a7v")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f31k4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7p0ch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytwj6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5t3ww"]
+size = Vector2(6, 5)
+
+[node name="CoconutJelly" unique_id=673148770 instance=ExtResource("1_s2gna")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=1332543583]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_m7uri")
+
+[node name="AnimatedSprite2D" parent="Area2D" parent_id_path=PackedInt32Array(1852275141) index="0" unique_id=284717404]
+sprite_frames = SubResource("SpriteFrames_f31k4")
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(1852275141) index="1" unique_id=263923442]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_5t3ww")

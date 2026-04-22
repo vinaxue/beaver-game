@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://da2i2kff1gvf6"]
+
+[ext_resource type="Script" uid="uid://dexoeaq0u7x8k" path="res://Scripts/Interfaces/base_topping.gd" id="1_4c42j"]
+
+[node name="BaseTopping" type="RigidBody2D" unique_id=525286366 groups=["trashable"]]
+z_index = 3
+script = ExtResource("1_4c42j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1332543583]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1852275141]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=284717404]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=263923442]

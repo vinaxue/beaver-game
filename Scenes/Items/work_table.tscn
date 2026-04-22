@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cjimvrxs2leyu"]
+
+[ext_resource type="Script" uid="uid://fm8l62t7pqno" path="res://Scripts/GameItems/work_table.gd" id="1_5ugfq"]
+[ext_resource type="Texture2D" uid="uid://c4vm7hcp0x5xc" path="res://Assets/Sprites/Work_Table_.png" id="1_ulj52"]
+[ext_resource type="PackedScene" uid="uid://bh6vvnwt37v88" path="res://Scenes/Items/jars_empty.tscn" id="2_ibqav"]
+[ext_resource type="PackedScene" uid="uid://bas3tdyr5nx82" path="res://Scenes/UI/inventory_slots.tscn" id="3_qhgij"]
+[ext_resource type="Script" uid="uid://drgrdx5l8h436" path="res://Scripts/UI/toppings_inventory.gd" id="4_tg7f7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibqav"]
+size = Vector2(463, 103)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v74l4"]
+size = Vector2(112, 9)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ibqav"]
+a = Vector2(96, -4)
+b = Vector2(-102, -4)
+
+[node name="WorkTable" type="StaticBody2D" unique_id=1440624001]
+script = ExtResource("1_5ugfq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=251134674]
+position = Vector2(-3.5, 46.5)
+shape = SubResource("RectangleShape2D_ibqav")
+
+[node name="JarsEmpty" parent="." unique_id=2110870149 instance=ExtResource("2_ibqav")]
+z_index = 1
+position = Vector2(-41, 32)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=54927129]
+texture = ExtResource("1_ulj52")
+
+[node name="Toppings" type="Area2D" parent="Sprite2D" unique_id=1774509791]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Toppings" unique_id=598746704]
+position = Vector2(157, -10.5)
+shape = SubResource("RectangleShape2D_v74l4")
+
+[node name="InventorySlots" parent="." unique_id=914429271 instance=ExtResource("3_qhgij")]
+script = ExtResource("4_tg7f7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=692167969]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=134334846]
+shape = SubResource("SegmentShape2D_ibqav")
+
+[connection signal="input_event" from="Sprite2D/Toppings" to="." method="_on_toppings_input_event"]

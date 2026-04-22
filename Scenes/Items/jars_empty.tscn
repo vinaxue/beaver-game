@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bh6vvnwt37v88"]
+
+[ext_resource type="Texture2D" uid="uid://crood6xhh1h1" path="res://Assets/Sprites/Drink_Jar_Base.png" id="1_3btkq"]
+[ext_resource type="Script" uid="uid://6ujo5ph5h7lk" path="res://Scripts/GameItems/jars_empty.gd" id="1_h27m3"]
+[ext_resource type="PackedScene" uid="uid://booqteknk6pgn" path="res://Scenes/Items/jar_empty.tscn" id="2_nsgop"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3btkq"]
+size = Vector2(104, 43)
+
+[node name="JarsEmpty" type="Node2D" unique_id=2110870149]
+script = ExtResource("1_h27m3")
+jar_empty = ExtResource("2_nsgop")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1911122210]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1275395318]
+position = Vector2(39, 0.5)
+shape = SubResource("RectangleShape2D_3btkq")
+
+[node name="Jar1" type="Sprite2D" parent="." unique_id=591303469]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_3btkq")
+
+[node name="Jar2" type="Sprite2D" parent="." unique_id=469486400]
+position = Vector2(26, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_3btkq")
+
+[node name="Jar3" type="Sprite2D" parent="." unique_id=1521703457]
+position = Vector2(52, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_3btkq")
+
+[node name="Jar4" type="Sprite2D" parent="." unique_id=1784827575]
+position = Vector2(78, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_3btkq")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

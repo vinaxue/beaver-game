@@ -3,15 +3,10 @@ extends Node2D
 @onready var kettle: AnimatedSprite2D = $Area2D/Kettle
 @onready var steam: Node2D = $Steam
 
-
-const COOLING_RATE = 5.0
-const BOILING_RATE = 5.0
-
 var is_boiling = false
 var current_temp = 0.0
-	
 
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if not is_boiling: 
 			start_boiling()
@@ -27,11 +22,11 @@ func finish_boiling():
 	
 func _process(delta: float) -> void:
 	if current_temp > 0 and not is_boiling: 
-		current_temp -= COOLING_RATE * delta
+		current_temp -= Constants.COOLING_RATE * delta
 	
 	if is_boiling: 
 		if current_temp < 100: 
-			current_temp += BOILING_RATE * delta
+			current_temp += Constants.BOILING_RATE * delta
 		else:
 			finish_boiling()
 	

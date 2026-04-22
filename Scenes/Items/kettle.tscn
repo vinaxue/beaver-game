@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c2rum02cwb6tv"]
 
 [ext_resource type="Texture2D" uid="uid://blkuslawtlcv1" path="res://Assets/Sprites/Kettle_.png" id="1_7a1uo"]
-[ext_resource type="Script" uid="uid://bhefxcejq3buy" path="res://Scripts/kettle.gd" id="1_ttcn6"]
-[ext_resource type="PackedScene" uid="uid://cgrhfa1b4khwd" path="res://Scenes/steam.tscn" id="3_4iebi"]
+[ext_resource type="Script" uid="uid://bhefxcejq3buy" path="res://Scripts/GameItems/kettle.gd" id="1_ttcn6"]
+[ext_resource type="PackedScene" uid="uid://cgrhfa1b4khwd" path="res://Scenes/VFX/steam.tscn" id="3_4iebi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7a1uo"]
 atlas = ExtResource("1_7a1uo")

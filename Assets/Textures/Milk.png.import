@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gumve1iqaifd"
-path="res://.godot/imported/Green_Tea_Base.png-edb5a2eb073e8008e46c175de4018bd9.ctex"
+uid="uid://ccu8443hwhq3s"
+path="res://.godot/imported/Milk.png-956990e364b01727ad5207fdbd7bad86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Green_Tea_Base.png"
-dest_files=["res://.godot/imported/Green_Tea_Base.png-edb5a2eb073e8008e46c175de4018bd9.ctex"]
+source_file="res://Assets/Textures/Milk.png"
+dest_files=["res://.godot/imported/Milk.png-956990e364b01727ad5207fdbd7bad86.ctex"]
 
 [params]
 

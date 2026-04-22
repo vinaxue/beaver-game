@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bpqdrqjbgawhs"]
+
+[ext_resource type="Script" uid="uid://7ao6w02ndllp" path="res://Scripts/GameItems/trash.gd" id="1_bjo46"]
+[ext_resource type="Texture2D" uid="uid://jvwr30ncjp3v" path="res://Assets/Sprites/Trash.png" id="1_ocoky"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocoky"]
+size = Vector2(24, 33)
+
+[node name="Trash" type="Node2D" unique_id=365446786]
+script = ExtResource("1_bjo46")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1705222886]
+collision_layer = 7
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=842472511]
+texture = ExtResource("1_ocoky")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2049760780]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_ocoky")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_shape_exited" from="Area2D" to="." method="_on_area_2d_area_shape_exited"]

@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://cqbswe6elskyw"]
-
-[ext_resource type="Script" uid="uid://depg4s8vxgj56" path="res://Scripts/inventory_slot.gd" id="1_luhj6"]
-
-[node name="Slot" type="Node2D" unique_id=1354836563]
-script = ExtResource("1_luhj6")
-
-[node name="Marker2D" type="Marker2D" parent="." unique_id=234167411]
